@@ -77,3 +77,10 @@ test("User's fetched city name should be Gwenborough", () => {
     expect(address.city).toEqual('Gwenborough');
   });
 });
+
+// Async Await
+test("User's fetched city name should be Gwenborough", async () => {
+  expect.assertions(1);
+  const { address } = await functions.fetchUser();
+  expect(address.city).toEqual('Gwenborough');
+});
